@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: 'unsafe-inline'; connect-src * 'unsafe-inline'; frame-src *;">
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>IDSimple</title>
+
+    <style>
+        div.result {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 70%;
+            background: #FFFE;
+            border-radius: 8px;
+        }
+        
+        .result p {
+            text-align: center;
+            font-family: Helvetica;
+            max-height: 70vh;
+            overflow: scroll;
+        }
+        
+        .result button {
+            color: #2EC1CE;
+            background: transparent;
+            border: none;
+            padding: 10px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <div id="data-capture-view" style="width: 100vw; height: 100vh; z-index: -1;"></div>
+
+    <div id="formulario">
+        <div class="contenedor-formulario">
+            <div class="wrap">
+                <form action="" class="formulario" name="formulario_registro" method="get">
+                    <div>
+                        <div class="input-group">
+                            <input type="text" id="nombre" name="nombre">
+                            <label class="label" id="label-nombre" for="nombre">Nombre / Name:</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="apellido-paterno" name="apellido-paterno">
+                            <label class="label" id="label-apellido-paterno" for="apellido-paterno">Apellido Paterno / Last Name:</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="apellido-materno" name="apellido-materno">
+                            <label class="label" id="label-apellido-materno" for="apellido-materno">Apellido Materno / Mother´s Last Name:</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="pasaporte" name="pasaporte">
+                            <label class="label" id="label-pasaporte" for="pasaporte">Pasaporte / ID:</label>
+                        </div>
+                        <div class="input-group selectDiv">
+                            <label class="label active selectLabel" id="label-genero" for="genero">Género / Genre</label>
+                            <select class="input-group selectClass" name="genero" id="genero">
+                                 <option value="none" selected disabled>Género / Genre</option>
+                                 <option value="femenino">Femenino / Female</option>
+                                 <option value="masculino">Masculino / Male</option>
+                             </select>
+                        </div>
+                        <div class="input-group nacionalidadDiv">
+                            <input type="text" id="nacionalidad" name="nacionalidad">
+                            <label class="label" id="label-nacionalidad" for="nacionalidad">Nacionalidad / Nacionality:</label>
+                        </div>
+                        <div class="input-group nacimientoDiv">
+                            <input type="date" id="nacimiento" name="nacimiento">
+                            <label class="label" id="label-nacimiento" for="nacimiento">Fecha de nacimiento / Date of birth:</label>
+                        </div>
+                        <div class="input-group correoDiv">
+                            <input type="email" id="correo" name="correo">
+                            <label class="label" id="label-correo" for="correo">Correo / Email:</label>
+                        </div>
+                        <div class="input-group telefonoDiv">
+                            <input type="text" id="telefono" name="telefono">
+                            <label class="label" id="label-telefono" for="telefono">Teléfono / Phone:</label>
+                        </div>
+                        <div class="input-group btn">
+                            <input type="submit" onclick="continueScanning()" id="btn-submit" value="Cancelar">
+                            <input type="submit" id="btn-submit" onclick="sendData()" value="Enviar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="spinner">
+        <img src="img/logo.svg" class="logo">
+        <div class="lds-roller" id="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/formulario.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

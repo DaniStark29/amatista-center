@@ -1,0 +1,34 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.scandit.passport"
+    },
+    "scandit-cordova-datacapture-core": {
+      "PACKAGE_NAME": "com.scandit.passport"
+    },
+    "scandit-cordova-datacapture-id": {
+      "PACKAGE_NAME": "com.scandit.passport"
+    },
+    "scandit-cordova-datacapture-text": {
+      "PACKAGE_NAME": "com.scandit.passport"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.scandit.passport"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.scandit.passport"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.scandit.passport"
+    }
+  }
+}

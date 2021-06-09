@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.scandit.passport" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="CordovaHttpPlugin">
+        <param name="android-package" value="com.silkimen.cordovahttp.CordovaHttpPlugin" />
+    </feature>
+    <feature name="ScanditCaptureCore">
+        <param name="android-package" value="com.scandit.datacapture.cordova.core.ScanditCaptureCore" />
+    </feature>
+    <feature name="ScanditIdCapture">
+        <param name="android-package" value="com.scandit.datacapture.cordova.id.ScanditIdCapture" />
+    </feature>
+    <feature name="ScanditTextCapture">
+        <param name="android-package" value="com.scandit.datacapture.cordova.text.ScanditTextCapture" />
+    </feature>
+    <name>IDSimple</name>
+    <description>IdCaptureSimpleSample for the Scandit Cordova plugin</description>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="AndroidXEnabled" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#c0262f" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+</widget>

@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+#formulario {
+    background: #ffffff;
+    font-family: "Roboto";
+    position: relative;
+    /* border-top: 30px solid #163a8a; */
+}
+
+.wrap {
+    width: auto;
+    /* padding: 6%; */
+    padding: 8px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0px 0px 12px grey;
+}
+
+.contenedor-formulario {
+    width: 100%;
+    color: #f2f2f2;
+    /* padding: 5%; */
+    padding: 1rem;
+}
+
+.contenedor-formulario .formulario {
+    width: 100%;
+    margin: auto;
+}
+
+.contenedor-formulario .formulario .input-group {
+    position: relative;
+    /* margin-bottom: 32px; */
+    /**/
+    margin-top: 2rem;
+}
+
+select,
+.contenedor-formulario .formulario .input-group input[type="text"],
+.contenedor-formulario .formulario .input-group input[type="email"],
+.contenedor-formulario .formulario .input-group input[type="date"],
+.contenedor-formulario .formulario .input-group input[type="password"] {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #163a8a;
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #BBDEFB;
+}
+
+select:focus,
+select:active,
+.contenedor-formulario .formulario .input-group input[type="text"]:focus,
+.contenedor-formulario .formulario .input-group input[type="text"]:active,
+.contenedor-formulario .formulario .input-group input[type="email"]:focus,
+.contenedor-formulario .formulario .input-group input[type="email"]:active,
+.contenedor-formulario .formulario .input-group input[type="date"]:focus,
+.contenedor-formulario .formulario .input-group input[type="date"]:active,
+.contenedor-formulario .formulario .input-group input[type="password"]:focus,
+.contenedor-formulario .formulario .input-group input[type="password"]:active {
+    outline: none;
+    border-bottom: 2px solid #163a8a;
+}
+
+.contenedor-formulario .formulario .input-group input[type="text"].error,
+.contenedor-formulario .formulario .input-group input[type="email"].error,
+.contenedor-formulario .formulario .input-group input[type="date"].error,
+.contenedor-formulario .formulario .input-group input[type="password"].error {
+    border-bottom: 2px solid #c0262f;
+}
+
+.contenedor-formulario .formulario .input-group input[type="text"].error+label,
+.contenedor-formulario .formulario .input-group input[type="email"].error+label,
+.contenedor-formulario .formulario .input-group input[type="date"].error+label,
+.contenedor-formulario .formulario .input-group input[type="password"].error+label {
+    color: #c0262f;
+}
+
+.contenedor-formulario .formulario .input-group label {
+    color: #163a8a;
+}
+
+.contenedor-formulario .formulario .input-group label.label {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+    font-size: 16px;
+    line-height: 16px;
+    position: absolute;
+    top: 16px;
+    left: 0;
+}
+
+.contenedor-formulario .formulario .input-group label.label.active {
+    top: -12px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #B6B6B6;
+}
+
+.contenedor-formulario .formulario .input-group.checkbox label,
+.contenedor-formulario .formulario .input-group.radio label {
+    display: inline-block;
+    cursor: pointer;
+    color: #163a8a;
+    position: relative;
+    padding: 5px 15px 5px 51px;
+    font-size: 1em;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.contenedor-formulario .formulario .input-group.checkbox label:hover,
+.contenedor-formulario .formulario .input-group.radio label:hover {
+    background: #bbdefb;
+}
+
+.contenedor-formulario .formulario .input-group.checkbox label:before,
+.contenedor-formulario .formulario .input-group.radio label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: 15px;
+    border-radius: 50%;
+    background: none;
+    border: 2px solid #163a8a;
+}
+
+.contenedor-formulario .formulario .input-group.error label {
+    color: #c0262f;
+}
+
+.contenedor-formulario .formulario .input-group.error label:hover {
+    background: rgba(211, 47, 47, 0.2);
+}
+
+.contenedor-formulario .formulario .input-group.error label:before {
+    border: 2px solid #c0262f;
+}
+
+.contenedor-formulario .formulario .input-group.radio input[type="radio"] {
+    display: none;
+}
+
+.contenedor-formulario .formulario .input-group.radio input[type="radio"]:checked+label:before {
+    display: none;
+}
+
+.contenedor-formulario .formulario .input-group.radio input[type="radio"]:checked+label {
+    padding: 5px 15px;
+    background: #163a8a;
+    border-radius: 2px;
+    color: #f2f2f2;
+}
+
+.contenedor-formulario .formulario .input-group.checkbox label:before {
+    border-radius: 3px;
+}
+
+.contenedor-formulario .formulario .input-group.checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.contenedor-formulario .formulario .input-group.checkbox input[type="checkbox"]:checked+label:before {
+    display: none;
+}
+
+.contenedor-formulario .formulario .input-group.checkbox input[type="checkbox"]:checked+label {
+    background: #163a8a;
+    color: #f2f2f2;
+    padding: 5px 15px;
+}
+
+.contenedor-formulario .formulario input[type="submit"] {
+    background: #163a8a;
+    border-radius: 1px;
+    border: 2px solid #f2f2f2;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    /**/
+    font-weight: bold;
+    /* padding: 15px; */
+    padding: 16px;
+    width: 48%;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.contenedor-formulario .formulario input[type="submit"]:hover {
+    background: #1976D2;
+}
+
+
+/**/
+
+.btn {
+    /* padding-top: 1rem; */
+    margin-left: 10px;
+    margin-bottom: 1rem;
+}
+
+.selectLabel {
+    top: -12px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #B6B6B6;
+}
+
+.selectClass {
+    top: -32px;
+    margin-bottom: -32px;
+}
+
+.selectDiv {
+    margin: 0;
+}
+
+.nacionalidadDiv,
+.nacimientoDiv,
+.correoDiv,
+.telefonoDiv {
+    top: -12px;
+}
+
+
+/*# sourceMappingURL=estilos.css.map */
+
+.logo {
+    width: 70%;
+    position: absolute !important;
+    top: 28%;
+    left: 12%;
+    margin: -73px 0 0 0px;
+}
+
+
+/* inicia spinner */
+
+#spinner {
+    position: relative !important;
+    margin-top: 50%;
+}
+
+.lds-roller {
+    width: 50px;
+    height: 50px;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -36px;
+}
+
+.lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #1976D2;
+    margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* termina spinner */
