@@ -17,8 +17,7 @@
       "cordova-plugin-advanced-http": {}
     },
     "platforms": [
-      "ios",
-      "android"
+      "ios"
     ]
   },
   "dependencies": {

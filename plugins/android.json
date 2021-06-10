@@ -7,6 +7,12 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.scandit.passport"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.scandit.passport"
+    },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.scandit.passport"
     },
@@ -17,12 +23,6 @@
       "PACKAGE_NAME": "com.scandit.passport"
     },
     "scandit-cordova-datacapture-text": {
-      "PACKAGE_NAME": "com.scandit.passport"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.scandit.passport"
-    },
-    "cordova-plugin-advanced-http": {
       "PACKAGE_NAME": "com.scandit.passport"
     }
   },

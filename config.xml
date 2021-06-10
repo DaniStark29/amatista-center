@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.scandit.passport" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>IDSimple</name>
-    <description>IdCaptureSimpleSample for the Scandit Cordova plugin</description>
+    <name>Amatista Center</name>
+    <description>Scanner para la captura de identificaciones</description>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -11,10 +11,32 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <preference name="StatusBarBackgroundColor" value="#c0262f" />
+    <preference name="ShowSplashScreenSpinner" value="false"/>
+    <preference name="SplashScreenDelay" value="3000" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <platform name="android">
         <allow-intent href="market:*" />
+            <icon background="res/icon/android/ldpi-background.png" density="ldpi" foreground="res/icon/android/ldpi-foreground.png" />
+            <icon background="res/icon/android/mdpi-background.png" density="mdpi" foreground="res/icon/android/mdpi-foreground.png" />
+            <icon background="res/icon/android/hdpi-background.png" density="hdpi" foreground="res/icon/android/hdpi-foreground.png" />
+            <icon background="res/icon/android/xhdpi-background.png" density="xhdpi" foreground="res/icon/android/xhdpi-foreground.png" />
+            <icon background="res/icon/android/xxhdpi-background.png" density="xxhdpi" foreground="res/icon/android/xxhdpi-foreground.png" />
+            <icon background="res/icon/android/xxxhdpi-background.png" density="xxxhdpi" foreground="res/icon/android/xxxhdpi-foreground.png" />
+
+            <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi" />
+            <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi" />
+            <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi" />
+            <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi" />
+            <splash src="res/screen/android/splash-land-xxhdpi.png" density="land-xxhdpi" />
+            <splash src="res/screen/android/splash-land-xxxhdpi.png" density="land-xxxhdpi" />
+
+            <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi" />
+            <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi" />
+            <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi" />
+            <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi" />
+            <splash src="res/screen/android/splash-port-xxhdpi.png" density="port-xxhdpi" />
+            <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi" /> 
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
